@@ -1,4 +1,4 @@
---[[ Credits to Stefanuk12 ]]--
+--> Credits to Stefanuk12
 
 if getgenv().Aiming then return getgenv().Aiming end
 
