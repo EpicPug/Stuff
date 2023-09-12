@@ -8,3 +8,5 @@ function Send(a, b, c)
 		warn(g);
 	end
 end
+
+return Send
