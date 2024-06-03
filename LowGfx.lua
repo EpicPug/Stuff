@@ -15,7 +15,6 @@ UserSettings():GetService('UserGameSettings').MasterVolume = 0
 
 --// Hidden Functions
 setsimulationradius(0, 0)
-setfpscap(144)
 
 --// Physical/UI Derender
 for _, v in next, game:GetDescendants() do
