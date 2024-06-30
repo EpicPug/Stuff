@@ -1,10 +1,15 @@
-local LocalPlayer = game.Players.LocalPlayer
+local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 
-local Humanoid = LocalPlayer.Character:FindFirstChild("Humanoid") or LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid")
+local LocalPlayer = Players.LocalPlayer
+local Humanoid = LocalPlayer.Character and (LocalPlayer.Character:FindFirstChild("Humanoid") or LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"))
 
-for i,v in pairs(game.Workspace:GetDescendants()) do
-	if v.ClassName == "Seat" or v.ClassName == "VehicleSeat" then
+if not Humanoid then
+	error("Humanoid not found in LocalPlayer's character.")
+end
+
+for _, v in pairs(game.Workspace:GetDescendants()) do
+	if v:IsA("Seat") or v:IsA("VehicleSeat") then
 		v:Destroy()
 	end
 end
@@ -15,4 +20,4 @@ function check()
 	end
 end
 
-RunService:BindToRenderStep("Sit",0,check)
+RunService:BindToRenderStep("SitCheck",0,check)
