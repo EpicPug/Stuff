@@ -1,4 +1,5 @@
 -- skid if you want 😋
+
 return function(url, callback, embedData, color)
 	local embed = {
 		color = color or 0,
