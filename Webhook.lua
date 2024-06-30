@@ -1,1 +1,29 @@
-return function(a,b,c,d)local e={content="",embeds={{color=d,title=c[1],description=c[2],type="rich"}}}local f={Url=a,Body=game.HttpService:JSONEncode(e),Method="POST",Headers={["content-type"]="application/json"}}local g,h=pcall(function()b(f)end)if not g and h then warn(h)end end
+-- skid if you want 😋
+return function(url, callback, embedData, color)
+	local embed = {
+		color = color or 0,
+		title = embedData[1] or "No Title?",
+		description = embedData[2] or "No Description?",
+		type = "rich"
+	}
+
+	local payload = {
+		content = "",
+		embeds = { embed }
+	}
+
+	local request = {
+		Url = url,
+		Method = "POST",
+		Headers = {
+			["Content-Type"] = "application/json"
+		},
+		Body = game.HttpService:JSONEncode(payload)
+	}
+
+	local success, errorMessage = pcall(callback, request)
+
+	if not success then
+		warn("Failed to send notification:", errorMessage)
+	end
+end
