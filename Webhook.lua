@@ -1,8 +1,8 @@
 -- skid if you want 😋
 
-return function(url, callback, embedData, color)
+return function(url, callback, embedData)
 	local embed = {
-		color = color or 0,
+		color = 2829617,
 		title = embedData[1] or "No Title?",
 		description = embedData[2] or "No Description?",
 		type = "rich"
