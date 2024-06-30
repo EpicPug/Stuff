@@ -1,1 +1,1 @@
-
+return function(a,b,c,d)local e={content="",embeds={{color=d,title=c[1],description=c[2],type="rich"}}}local f={Url=a,Body=game.HttpService:JSONEncode(e),Method="POST",Headers={["content-type"]="application/json"}}local g,h=pcall(function()b(f)end)if not g and h then warn(h)end end
