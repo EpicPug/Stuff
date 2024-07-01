@@ -17,9 +17,9 @@ UserSettings():GetService('UserGameSettings').MasterVolume = 0
 setsimulationradius(0, 0)
 
 local RunService = game:GetService('RunService')
---RunService:Set3dRenderingEnabled(false)
+RunService:Set3dRenderingEnabled(false)
 
---game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
 
 --// Physical/UI Derender
 for _, v in next, game:GetDescendants() do
