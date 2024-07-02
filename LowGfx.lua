@@ -81,9 +81,6 @@ for _, v in next, game:GetDescendants() do
 	elseif v:IsA('Sound') then
 		v.SoundId = ''
 		v.Volume = 0
-	elseif v:IsA("Part") or v:IsA("WedgePart") or v:IsA("CornerWedgePart") then
-		v.Material = 'SmoothPlastic'
-		v.Transparency = 1
 	end
 end
 
@@ -130,8 +127,5 @@ local WorkspaceChildAdded;WorkspaceChildAdded = workspace.DescendantAdded:Connec
 	elseif v:IsA('Sound') then
 		v.SoundId = ''
 		v.Volume = 0
-	elseif v:IsA("Part") or v:IsA("WedgePart") or v:IsA("CornerWedgePart") then
-		v.Material = 'SmoothPlastic'
-		v.Transparency = 1
 	end
 end)
