@@ -1,5 +1,3 @@
--- skid if you want. 😉
-
 local Players = game:GetService('Players')
 local HttpService = game:GetService('HttpService')
 
