@@ -7,6 +7,8 @@ pcall(function()
 end)
 
 local Player = game.Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+
 local Humanoid = Player.Character:WaitForChild('Humanoid')
 
 Humanoid.Seated:Connect(function()
