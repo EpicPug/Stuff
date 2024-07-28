@@ -7,6 +7,10 @@ pcall(function()
 	UserSettings().GameSettings.MasterVolume = 0
 end)
 
+local StarterGui = game:GetService('StarterGui')
+StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
+StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+
 pcall(function()
 	local Lighting = game:GetService('Lighting')
 	Lighting.GlobalShadows = false
