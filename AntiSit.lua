@@ -9,9 +9,10 @@ end)
 local Player = game.Players.LocalPlayer
 local RunService = game:GetService('RunService')
 
-RunService.Heartbeat:Connect(function()
-	local Humanoid = Player.Character and Player.Character:FindFirstChild('Humanoid')
-	if Humanoid and Humanoid.Sit then
+local Humanoid = Player.Character:WaitForChild('Humanoid')
+
+Humanoid.Seated:Connect(function()
+	if Humanoid.Sit  then
 		Humanoid.Sit = false
 		Humanoid.Jump = true
 	end
