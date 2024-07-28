@@ -7,8 +7,6 @@ pcall(function()
 end)
 
 local Player = game.Players.LocalPlayer
-local RunService = game:GetService('RunService')
-
 local Humanoid = Player.Character:WaitForChild('Humanoid')
 
 Humanoid.Seated:Connect(function()
