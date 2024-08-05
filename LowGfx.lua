@@ -5,6 +5,7 @@ settings().Physics.PhysicsEnvironmentalThrottle = 1
 settings().Rendering.MeshPartDetailLevel = 1
 
 game:GetService('RunService'):Set3dRenderingEnabled(false)
+game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
 
 pcall(function()
 	for _, v in pairs(game:GetDescendants()) do
