@@ -11,7 +11,7 @@ pcall(function()
 	end
 end)
 
-local function idk()
+function idk()
 	if Connection ~= nil then
 		Connection:Disconnect()
 		Connection = nil
