@@ -1,6 +1,7 @@
-local MainEvent = game:GetService('ReplicatedStorage').MainEvent
+local ReplicatedStorage = game:GetService('ReplicatedStorage')
+local MainEvent = ReplicatedStorage:WaitForChild('MainEvent')
 
-for i,v in ipairs(_G.Codes) do
-	MainEvent:FireServer('EnterPromoCode', v)
-	task.wait(3);
+for _, str in ipairs(_G.Codes) do
+	MainEvent:FireServer('EnterPromoCode', str)
+	task.wait(3)
 end
