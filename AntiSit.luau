@@ -1,5 +1,9 @@
 --!strict
 
+if not game:IsLoaded() then
+	game.Loaded:Wait()
+end
+
 const Players = game:GetService("Players")
 
 const player = Players.LocalPlayer :: Player
@@ -22,10 +26,6 @@ const function onCharacterAdded(character: Model)
 		humanoid.Sit = false
 		humanoid.Jump = true
 	end)
-end
-
-if not game:IsLoaded() then
-	game.Loaded:Wait()
 end
 
 player.CharacterAdded:Connect(onCharacterAdded)
