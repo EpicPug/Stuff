@@ -2,9 +2,9 @@
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-loacl mainRemoteEvent = ReplicatedStorage:WaitForChild("MainEvent") :: RemoteEvent
+local mainRemoteEvent = ReplicatedStorage:WaitForChild("MainEvent") :: RemoteEvent
 
-loacl NEXT_REDEEM_DELAY = 3
+local NEXT_REDEEM_DELAY = 3
 
 for _, code in getgenv().Codes do
 	if typeof(code) ~= "string" then
